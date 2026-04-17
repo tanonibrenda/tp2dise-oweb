@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La Importancia de la Semántica</title>
+</head>
+<body>
+
+    <h1>La Importancia de la Semántica</h1>
+    <p>Usar la etiqueta correcta garantiza que todos los usuarios puedan interactuar con la página, independientemente de cómo naveguen.</p>
+
+    <h2>Ejemplo Incorrecto (Antipatrón)</h2>
+    <p>Si usamos un enlace para ejecutar una acción en la misma página, los lectores de pantalla anuncian "Enlace", lo que confunde al usuario. Además, no se puede activar con la barra espaciadora.</p>
+    
+    <a href="#" onclick="alert('Acción simulada')">Guardar Cambios</a>
+
+    <h2>Ejemplo Correcto (Semántico)</h2>
+    <p>Al usar la etiqueta nativa, el lector de pantalla anuncia "Botón" y el navegador ya sabe que debe responder tanto a la tecla Enter como a la barra Espaciadora.</p>
+    
+    <button type="button" onclick="alert('Acción simulada')">Guardar Cambios</button>
+
+    <h2>¿Qué normas WCAG respalda esto?</h2>
+    <ul>
+        <li><strong>WCAG 4.1.2 (Nombre, Función, Valor):</strong> Exige que el software sepa qué hace cada elemento. Usar <code>&lt;button&gt;</code> le da el rol de "botón" automáticamente.</li>
+        <li><strong>WCAG 2.1.1 (Teclado):</strong> Exige que todo se pueda usar con teclado. El <code>&lt;button&gt;</code> nativo cumple esto sin tener que programar nada extra.</li>
+    </ul>
+
+</body>
+</html>
